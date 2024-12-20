@@ -34,7 +34,7 @@ font & reset css
 reset
 --------------------------------------------- 
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 figure, header, nav, section, article, aside, footer, figcaption {
@@ -93,10 +93,16 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #004F6E;
+}
+
+h6{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #000;
 }
 
 ul {
@@ -574,6 +580,22 @@ header
 }
 
 @media (max-width: 767px) {
+
+
+
+  h2 {
+    font-size: 2em !important;/* Smaller size for mobile */
+}
+
+.green-button {
+    padding: 8px 16px!important; /* Smaller padding for green button */
+    font-size: 0.9em!important; /* Smaller font size */
+}
+
+.orange-button {
+    padding: 8px 16px; /* Smaller padding for orange button */
+    font-size: 0.9em; /* Smaller font size */
+}
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -789,7 +811,7 @@ banner
 .slide-inner .header-text .buttons .green-button {
   display: inline;
   float: left;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -1169,14 +1191,16 @@ partners
 */
 
 section.partners {
+  text-align: center;
   background-color: #004F6E;
   padding: 80px 0px;
 }
 
 section.partners .item {
-  margin: 0px 15px;
+  margin: 5px 15px;
   cursor: pointer;
   transition: all .3s;
+
 }
 
 section.partners .item:hover {
@@ -1321,7 +1345,11 @@ section.what-we-do {
 
 .what-we-do .right-items .item {
   border-radius: 5px;
-  padding: 40px 30px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   position: relative;
@@ -1468,6 +1496,7 @@ section.service-details ul.nacc li .left-image {
   margin-right: 50px;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 
 section.service-details ul.nacc li .left-image img {
@@ -1655,6 +1684,7 @@ body {
     margin-right: 15px;
     font-size: 15px;
     padding: 15px 20px;
+ 
   }
   section.about-us .right-content {
     margin-left: 0px;
@@ -1769,47 +1799,18 @@ body {
 
 
 
-/* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  font-size: 30px;
+
+
+
+/* adjut the zise of the social icons */
+
+
+
+
+.socialimg img{
   width: 50px;
-  text-align: center;
-  text-decoration: none;
+  height: 50px;
 }
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-/* Instagram */
-.fa-instagram {
-  background: #FD09B8;
-  color: white;
-}
-
-/* Whastapp */
-.fa-whatsapp {
-  background: #53CE60;
-  color: white;
-}
-
-
 
 
 
@@ -1977,5 +1978,143 @@ body {
 }
 
 
+#imagen{
+  border-radius: 10px;
+}
 
+
+
+/* RESPONSIVE GALLERY */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 991px) {
+  .about-us#about {
+      display: none;
+  }
+}
+
+
+
+/* botones contacot cada profesional no se colpsan */
+@media only screen and (max-width: 992px) {
+  .container .row .col-12 {
+      padding-left: 0!important; /* Elimina el padding-left en dispositivos móviles */
+      padding-right: 0!important; /* Opcional: Elimina el padding-right también */
+  }
+}
+
+
+@media (min-width: 992px) {
+  .service-details {
+      display: none; /* Oculta la sección en pantallas más grandes */
+  }
+}
+
+
+
+.img-service{
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 5px;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .menu div {
+      margin-bottom: 10px !important; /* Ajusta el valor según el espaciado que desees */
+  }
+
+  .menu div:last-child {
+      margin-bottom: 0 !important; /* Elimina el margen del último elemento */
+  }
+}
+
+
+
+.banner-carousel {
+  position: relative;
+  max-width: 100%; /* Ajusta según sea necesario */
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  min-width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+
+
+.simple-cta {
+   /* o absolute si es necesario */
+  top: 0; /* Ajusta según sea necesario */
+  left: 0; /* Ajusta según sea necesario */
+  z-index: 9999; /* Asegúrate de que sea mayor que otros elementos */
+}
+
+.service-details {
+  z-index: 1; /* Asegúrate de que sea menor que simple-cta */
+}
 
